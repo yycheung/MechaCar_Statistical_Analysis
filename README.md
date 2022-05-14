@@ -24,4 +24,20 @@ The design specifications for the MechaCar suspension coils dictate that the var
 However, then looking into the statistical summary of each manufacturing lots, we found that lot 3 has extraordinary large variance value 170, which is well beyond the limit. While lot 1 and lot 2 have very small variance value. So we indicate that lot 1 and lot 2 meet the design specification, however, lot 3 does not. We can visulize the ourtiers in lot 3 in a boxplot as follows, the dots beyon
  ![](Resources/images/boxplotlot.png)
 
+## T-Tests on Suspension Coils
+
+We perform t.test() function to determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch. Result is as follows:
+
+ ![](Resources/images/ttestall.png)
+
+From the above result,we see that the p-Value is 0.06, which is higher than the common significance level of 0.05, thus there is not sufficient evidence to reject the null hypothesis. In other words, the mean of all three of these manufacturing lots is statistically similar to the presumed population mean of 1500.
+
+In addition, we perform t.test() function and its subset() argument to determine if the PSI for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch.  Result is as follows:
+
+![](Resources/images/ttestlot.png)
+
+Lot 1 sample has a p-value of 1, thus we cannot reject the null hypothesis. Lot 2 has a p-Value of 0.61, thus we cannot reject the null hypothesis either. These mean that there is no statistical difference between the observed sample mean of lot 1 and lot 2 and the presumed population mean (1500).
+
+However, the p-value of lot 3 is 0.04, which is lower than the significance level of 0.05. And the sample mean is 1496.14 which is relatively away from 1500. So, we indicate to reject the null hypothesis. In other words, the sample mean and the presumed population mean are statistically different.
+
 
