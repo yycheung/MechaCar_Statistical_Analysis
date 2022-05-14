@@ -38,6 +38,39 @@ In addition, we perform t.test() function and its subset() argument to determine
 
 Lot 1 sample has a p-value of 1, thus we cannot reject the null hypothesis. Lot 2 has a p-Value of 0.61, thus we cannot reject the null hypothesis either. These mean that there is no statistical difference between the observed sample mean of lot 1 and lot 2 and the presumed population mean (1500).
 
-However, the p-value of lot 3 is 0.04, which is lower than the significance level of 0.05. And the sample mean is 1496.14 which is relatively away from 1500. So, we indicate to reject the null hypothesis. In other words, the sample mean and the presumed population mean are statistically different.
+However, the p-value of lot 3 is 0.04, which is lower than the significance level of 0.05. And the sample mean is 1496.14 which is relatively away from 1500. So, we indicate to reject the null hypothesis. In other words, the sample mean and the presumed population mean are statistically different. <b>We recommend inspection on suspension coils in lot 3 to remove those beyond standard. </b>
+
+## Study Design: MechaCar vs Competition
+
+We designed a statistical study to compare performance of the MechaCar vehicles against performance of vehicles from other manufacturers. We are going to brief (1)the metric to be tested, (2)a null hypothesis, an alternative hypothesis and (3) a statistical test which is to test the hypothesis.
+
+* <b>Metric</b>
+
+a) Price
+
+b) Resale Value
+
+c) MPG (Fuel Efficiency)
+
+d) Horse Power
+
+e) Average Annual Cost of Maintenance
+
+f) Safety rating
+
+* <b>Hypothesis</b>
+
+Null Hypothesis (Ho): MechaCar is price competitive based on its performance on the above matrics.
+
+Alternative Hypothesis (Ha): MechaCar is NOT price competitive based on its performance on the above matrics.
+
+
+* <b>Statistical Tests</b>
+
+We will perform a multiple linear regression to determine the factors that have the highest correlation with the sales price, fianlly come up with a combination has the greatest impact on pricing. We will also perform Two-Sample t-Test to compare the average listing price versus other manufacturers, to assess if MechaCar is price competitive.
+
+* <b>Data Sources</b>
+
+We collect data of compared models from major manufacturers in most recent 3 years based on the above metircs.
 
 
