@@ -33,4 +33,19 @@ lot_summary
 
 #box plot: PSI each Lot
 plt_lot <- ggplot(Suspension_Coil_df,aes(x=Manufacturing_Lot,y=PSI)) 
-pl_lot + geom_boxplot()
+plt_lot + geom_boxplot()
+
+
+# use t.test() to determine if the PSI across all manufacturing lots 
+# is statistically different from the population mean of 1,500 PSI
+t.test(Suspension_Coil_df$PSI,mu=1500)
+
+
+# t.test on individual lot
+lot1 <- subset(Suspension_Coil_df, Manufacturing_Lot=="Lot1")
+lot2 <- subset(Suspension_Coil_df, Manufacturing_Lot=="Lot2")
+lot3 <- subset(Suspension_Coil_df, Manufacturing_Lot=="Lot3")
+
+t.test(lot1$PSI,mu=1500)
+t.test(lot2$PSI,mu=1500)
+t.test(lot3$PSI,mu=1500)
